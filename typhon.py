@@ -136,8 +136,8 @@ class TyphonApp(object):
         return cv2.warpAffine(image, rot_mat, image.shape[0:2], flags=cv2.INTER_LINEAR)
 
     def draw_text(self, frame, text, pos, color):
-        cv2.putText(frame, text, pos, cv2.FONT_HERSHEY_SIMPLEX, .5, (0,) * 3, 2, cv2.CV_AA)
-        cv2.putText(frame, text, pos, cv2.FONT_HERSHEY_SIMPLEX, .5, color, 1, cv2.CV_AA)
+        cv2.putText(frame, text, pos, cv2.FONT_HERSHEY_SIMPLEX, .5, (0,) * 3, 2, cv2.LINE_AA)
+        cv2.putText(frame, text, pos, cv2.FONT_HERSHEY_SIMPLEX, .5, color, 1, cv2.LINE_AA)
 
     def image_to_text(self, img):
         a = np.asarray(img)
