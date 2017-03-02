@@ -1,4 +1,3 @@
 numpy
-cv2
 pytesseract
-PIL
+Pillow
