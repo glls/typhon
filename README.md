@@ -5,9 +5,15 @@ Also an interactive video to text converter written in python.
 
 ![Typhon](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Zeus_Typhon_Staatliche_Antikensammlungen_596.jpg/640px-Zeus_Typhon_Staatliche_Antikensammlungen_596.jpg)
 
+
+## requirements
+```
+apt-get install python-opencv
+pip install -r requirements.txt
+```
+
 ## usage 
 ```
-pip install -r requirements.txt
 python typhon.py video_filename
 ```
 
