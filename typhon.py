@@ -146,7 +146,7 @@ class TyphonApp(object):
 
 
 if __name__ == "__main__":
-    print("Typhon v1.0 - Interactive video to text converter\n")
+    print("Typhon v1.1 - Interactive video to text converter\n")
     # print("Python version", sys.version)
     # print("OpenCV version", cv2.__version__)
     TyphonApp().run()
