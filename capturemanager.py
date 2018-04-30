@@ -47,19 +47,19 @@ class CaptureManager(object):
 
     @property
     def fps(self):
-        fps = self._capture.get(cv2.CAP_PROP_FPS)
+        fps = self._capture.get(cv2.cv.CV_CAP_PROP_FPS)
         if math.isnan(fps):
             fps = self._fps_estimate
         return fps
 
     @property
     def total_frames(self):
-        return int(self._capture.get(cv2.CAP_PROP_FRAME_COUNT))
+        return int(self._capture.get(cv2.cv.CV_CAP_PROP_FRAME_COUNT))
 
     @property
     def video_size(self):
-        return (int(self._capture.get(cv2.CAP_PROP_FRAME_WIDTH)),
-                int(self._capture.get(cv2.CAP_PROP_FRAME_HEIGHT)))
+        return (int(self._capture.get(cv2.cv.CV_CAP_PROP_FRAME_WIDTH)),
+                int(self._capture.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT)))
 
     @property
     def is_writing_image(self):
@@ -114,6 +114,6 @@ class CaptureManager(object):
         self._image_filename = filename
 
     def goto_frame(self, frame_number):
-        self._capture.set(cv2.CAP_PROP_POS_FRAMES, frame_number)
-        if self._capture.get(cv2.CAP_PROP_POS_FRAMES) == frame_number:
+        self._capture.set(cv2.cv.CV_CAP_PROP_POS_FRAMES, frame_number)
+        if self._capture.get(cv2.cv.CV_CAP_PROP_POS_FRAMES) == frame_number:
             return True
